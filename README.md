@@ -42,3 +42,40 @@ Details on how to contribute to the project.
 
 ## License
 Project license information.
+
+### Design Document for Streamlit Dashboard
+
+Your Streamlit dashboard design document can follow this structure:
+
+1. **Project Summary Page**
+    - **Objective**: Provide an overview of the project, dataset, and client's requirements.
+    - **Components**:
+        - Project introduction.
+        - Dataset summary.
+        - Business requirements overview.
+
+2. **Visual Differentiation Study Page**
+    - **Objective**: Address BR1 by showcasing the study's findings.
+    - **Components**:
+        - Analysis of average and variability images for each class.
+        - Visual comparison between healthy and powdery mildew-infected leaves.
+        - Image montage display for both classes.
+
+3. **Mildew Detection Page**
+    - **Objective**: Fulfill BR2 by allowing users to predict the health status of cherry leaves.
+    - **Components**:
+        - File uploader for image prediction.
+        - Display of uploaded images with prediction statements and probabilities.
+        - Table of image names and prediction results with a download option.
+
+4. **Project Hypothesis and Validation Page**
+    - **Objective**: Explain the project hypothesis and the methods used for validation.
+    - **Components**:
+        - Detailed explanation of hypothesis.
+        - Validation methods and findings.
+
+5. **Model Performance Page**
+    - **Objective**: Present the performance metrics of the developed model.
+    - **Components**:
+        - Accuracy and loss graphs.
+        - Detailed model evaluation results.
