@@ -1,2 +1,4 @@
 input/
 dev_requirements.txt
+jupyter_notebooks/
+kaggle.json
