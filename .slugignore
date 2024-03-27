@@ -1,4 +1,4 @@
-input/
+inputs/
 dev_requirements.txt
-jupyter_notebooks/
+*.ipynb
 kaggle.json
