@@ -38,8 +38,7 @@ def display_mildew_detection():
     model = load_model()
     uploaded_files = st.file_uploader("Choose cherry leaf images", type=['png', 'jpg', 'jpeg'], accept_multiple_files=True)
 
-    # Prepare an empty DataFrame to store results
-    results_df = pd.DataFrame(columns=["Image Name", "Prediction", "Confidence"])
+    results_list = []  # List to collect dictionaries of results
 
     for uploaded_file in uploaded_files:
         img = Image.open(uploaded_file).convert('RGB')
@@ -47,10 +46,13 @@ def display_mildew_detection():
         img_array = np.expand_dims(np.array(resized_img) / 255.0, axis=0)
         
         prediction, confidence = predict_mildew(model, img_array)
-        # Append results to the DataFrame
-        results_df = results_df.append({"Image Name": uploaded_file.name, "Prediction": prediction, "Confidence": confidence}, ignore_index=True)
+        # Append results to the list as dictionaries
+        results_list.append({"Image Name": uploaded_file.name, "Prediction": prediction, "Confidence": confidence})
     
-    if not results_df.empty:
+    if results_list:  # Check if the list is not empty
+        # Convert list of dicts to DataFrame
+        results_df = pd.DataFrame(results_list)
+        
         # Display the results table
         st.write("## Prediction Results")
         st.dataframe(results_df)
