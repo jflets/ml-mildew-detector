@@ -41,7 +41,6 @@ def display_model_performance():
     test_performance_path = os.path.join(model_outputs_dir, "test_results.pkl")
     
     if os.path.exists(test_performance_path):
-        # Assuming the test performance data is saved as a pickle file
         test_performance_df = pd.read_pickle(test_performance_path)
         st.dataframe(test_performance_df)
     else:

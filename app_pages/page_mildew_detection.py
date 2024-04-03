@@ -51,7 +51,7 @@ def display_mildew_detection():
             
             prediction, confidence = predict_mildew(model, img_array)
             st.write(f"Prediction: **{prediction}**")
-            st.write(f"Confidence: **{confidence}**")  # Correctly formatted percentage
+            st.write(f"Confidence: **{confidence}**")
 
 if __name__ == "__main__":
     display_mildew_detection()
