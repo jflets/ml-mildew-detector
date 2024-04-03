@@ -38,25 +38,30 @@ def display_mildew_detection():
     model = load_model()
     uploaded_files = st.file_uploader("Choose cherry leaf images", type=['png', 'jpg', 'jpeg'], accept_multiple_files=True)
 
-    results_list = []  # List to collect dictionaries of results
+    # List to collect dictionaries of results for the summary table
+    results_list = []
 
+    # Loop through each uploaded file
     for uploaded_file in uploaded_files:
-        img = Image.open(uploaded_file).convert('RGB')
-        resized_img = resize_image(img)
-        img_array = np.expand_dims(np.array(resized_img) / 255.0, axis=0)
-        
-        prediction, confidence = predict_mildew(model, img_array)
-        # Append results to the list as dictionaries
-        results_list.append({"Image Name": uploaded_file.name, "Prediction": prediction, "Confidence": confidence})
-    
-    if results_list:  # Check if the list is not empty
-        # Convert list of dicts to DataFrame
-        results_df = pd.DataFrame(results_list)
-        
-        # Display the results table
-        st.write("## Prediction Results")
-        st.dataframe(results_df)
+        with st.container():  # Use a container for layout control
+            img = Image.open(uploaded_file).convert('RGB')
+            st.image(img, caption="Uploaded Image", use_column_width=True)
+            resized_img = resize_image(img)
+            img_array = np.expand_dims(np.array(resized_img) / 255.0, axis=0)
+            
+            prediction, confidence = predict_mildew(model, img_array)
+            st.write(f"Prediction: **{prediction}**")
+            st.write(f"Confidence: **{confidence}**")
+            
+            # Append results to the list for the summary table
+            results_list.append({"Image Name": uploaded_file.name, "Prediction": prediction, "Confidence": confidence})
 
+    # After processing all files, display the summary table
+    if results_list:  
+        st.write("## Summary of Prediction Results")
+        results_df = pd.DataFrame(results_list)
+        st.dataframe(results_df)
+        
         # Convert DataFrame to CSV for download
         csv = results_df.to_csv(index=False).encode('utf-8')
         b64 = base64.b64encode(csv).decode()
