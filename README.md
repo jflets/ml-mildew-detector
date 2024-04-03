@@ -1,16 +1,14 @@
 # Mildew Detection in Cherry Leaves
 
 ## Project Overview
-This project aims to develop a machine learning model and a supporting dashboard to differentiate between healthy cherry leaves and those infected with powdery mildew. The project fulfills two main business requirements:
-1. Conduct a study to visually differentiate a healthy cherry leaf from one infected with powdery mildew.
-2. Predict if a cherry leaf is healthy or contains powdery mildew.
+This project aims to develop a machine learning model and a supporting dashboard to differentiate between healthy cherry leaves and those infected with powdery mildew.
 
 ## How to Use the Streamlit Dashboard for Mildew Detection in Cherry Leaves
 
 Our Streamlit dashboard is designed to provide an interactive way to explore our machine learning model's capabilities in detecting powdery mildew in cherry leaves. Here's a guide on how to navigate and use the dashboard effectively.
 
 #### Accessing the Dashboard
-1. Open a web browser and navigate to the URL of the deployed dashboard. Due to the nature of Heroku please allow some time for the application to load: https://jf-mildew-detector-09b8c9aef9a8.herokuapp.com/.
+1. Open a web browser and navigate to the URL of the deployed dashboard. Due to the nature of Heroku please allow some time for the application to load: https://jf-mildew-detector-09b8c9aef9a8.herokuapp.com.
 
 #### Navigating the Dashboard
 The sidebar on the left side of the dashboard serves as your main navigation menu. Here, you can select different pages to explore various aspects of the project.
@@ -57,11 +55,9 @@ The dataset used in this project contains images of cherry leaves, categorized i
 - **Validation**: The hypothesis will be validated by achieving a target accuracy of 97% in distinguishing between the two classes of leaves.
 
 ## ML Business Case
-Implementing an ML model addresses the need for a scalable solution to inspect cherry leaves for powdery mildew. Success in this project can lead to broader applications across different crops, aligning with the company's operational efficiency and product quality goals.
+Implementing an ML model addresses the need for a scalable solution to inspect cherry leaves for powdery mildew. Success in this project can lead to broader applications across different crops, aligning with the company's goals.
 
 ## Design Document for Streamlit Dashboard
-
-Your Streamlit dashboard design document can follow this structure:
 
 1. **Project Summary Page**
     - **Objective**: Provide an overview of the project, dataset, and client's requirements.
@@ -98,10 +94,12 @@ Your Streamlit dashboard design document can follow this structure:
 
 ## Bugs and or Issues
 ### Bugs:
- -
+ - There are currently no bugs that I am aware of in either the notebooks or the streamlit code.
 
-### Issues:
- - When trying to deploy my application to Heroku, I ran in to an issue of having to large a slug (exceeded max slug limit of: 500Mb) I had a slugignore but was till well over the limit. After analyzing the build logs i realized that the packages bing installed where very large and had multiple additional dependencies leading to a larger slug. To resolve this i decided to adjust my decencies and slim them down to only the main ones I need, this made a slight difference. I then decided to add all static images and files not used in the deployment to the slugignore and again this help some what but i was still over the limit.
+### Issues during development:
+ 1. I had an issue when creating the ML model where i was getting under fitting. This was due to a low epoch amount leading to this issue. After some testing I settled on 15 epochs as this gave me the best balance in my ML model.
+
+ 2. When trying to deploy my application to Heroku, I ran in to an issue of having to large a slug (exceeded max slug limit of: 500Mb) I had a slugignore but was till well over the limit. After analyzing the build logs i realized that the packages bing installed where very large and had multiple additional dependencies leading to a larger slug. To resolve this i decided to adjust my decencies and slim them down to only the main ones I need, this made a slight difference. I then decided to add all static images and files not used in the deployment to the slugignore and again this help some what but i was still over the limit.
  I then realized that it was the fact that i was using the full version of tensorflow rather than just tensorflow-cpu this was casing the slug size issue. I decided to split my requirements into a development requirements and a deployment requirements, as the application does not use all the same dependencies as the jupyter notebooks I then used tensorflow-cpu as it is much smaller than the full tensorflow and this fixed the slug size issue.
 
 ## Deployment
@@ -137,7 +135,7 @@ Your Streamlit dashboard design document can follow this structure:
 
 **Troubleshooting Deployment Issues**
 - Ensure all dependencies listed in your `requirements.txt` are available and not causing conflicts.
-- Make sure to separate your dependencies with a development requirements.txt folder and your main one, this will reduce unnecessary dependencies that will inflate the final file size on Heroku, leading to errors.
+- Make sure to separate your dependencies with a `dev_requirements.txt` folder and your main one, this will reduce unnecessary dependencies that will inflate the final file size on Heroku, leading to errors.
 - Check your `Procfile` and `setup.sh` (if used) for any errors in commands.
 - Review the build logs in Heroku's dashboard for specific error messages that can guide troubleshooting.
 
@@ -150,6 +148,8 @@ Your Streamlit dashboard design document can follow this structure:
     - Usage: Pandas provides convenient data structures and functions for data analysis tasks. In this project, it's primarily used for handling and displaying data in tabular form, which is helpful for summarizing the model's performance metrics.
 - ### Matplotlib
     - Usage: Matplotlib is a plotting library used for creating static, interactive, and animated visualizations in Python. It's used extensively in this project to plot learning curves, model performance, and augmented images.
+- ### Pillow
+    - Usage: Pillow, the Python Imaging Library, adds image processing capabilities to our Python interpreter. In this project, it is crucial for loading, processing, and manipulating images before they are fed into the machine learning model for training and predictions. Pillow's functionality enables us to apply necessary pre-processing steps to the images, such as resizing, which directly impacts the model's performance.
 - ### Streamlit
     - Usage: Streamlit is an open-source app framework for Machine Learning and Data Science teams. It's used to quickly build interactive web applications for our model's visual differentiation study and mildew detection functionality.
 
