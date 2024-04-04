@@ -3,6 +3,16 @@
 ## Project Overview
 This project aims to develop a machine learning model and a supporting dashboard to differentiate between healthy cherry leaves and those infected with powdery mildew.
 
+## Agile
+### Kanban Board
+I utilized a [Kanban Board](https://github.com/users/jflets/projects/4) to layout what needed to be completed to finish this project. Doing this kept me on track and helped break up the whole project into manageable chunks with clear objectives.
+
+### User Stories
+From 5 Epics, 9 User stories were developed. Each story was given acceptance criteria to complete and tasks to further break down each story. The full list of User Stories, separated by those completed and those pushed to a future release, is available on the project [Kanban Board](https://github.com/users/jflets/projects/4).
+
+### Story Points
+Each story was assigned story points based on your best estimation for the time/difficulty of completing each story, using the fibonacci sequence. Using the story points give me a good understanding of how long each task would take.
+
 ## How to Use the Streamlit Dashboard for Mildew Detection in Cherry Leaves
 
 Our Streamlit dashboard is designed to provide an interactive way to explore our machine learning model's capabilities in detecting powdery mildew in cherry leaves. Here's a guide on how to navigate and use the dashboard effectively.
