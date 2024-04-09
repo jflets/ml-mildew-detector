@@ -164,6 +164,19 @@ Implementing an ML model addresses the need for a scalable solution to inspect c
     - Usage: Streamlit is an open-source app framework for Machine Learning and Data Science teams. It's used to quickly build interactive web applications for our model's visual differentiation study and mildew detection functionality.
 
 
+## Testing
+
+| **Feature**       | **Expected Outcome**                                                       | **Testing Performed**                                            | **Result**                            | **Pass/Fail** |
+|:-----------------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------:|:-------------------------------------:|:-------------:|
+| Nav links         | Nav links should load the corresponding page                               | Click the nav links                                              | All links open the appropriate pages  | Pass          |
+| Links             | Links should load the appropriate content                                  | Click the kaggle link                                       | Link loads the kaggle mildew data page            | Pass          |
+| Show information checkboxes         | Checkboxes should display the appropriate information when clicked | Click the checkboxes                                                   | Displays the appropriate content           | Pass          |
+| Mildew detection page | User should be able to upload multiple images and each images should be displayed and should display weather the leaf is healthy or infected with a confidence percentage. Then there should be a summary at the bottom of all the images and their results.                                | Upload multiple images to mildew detector | All images are displayed with their results and the summary is displayed at the bottom | Pass          |
+| Upload image button | Clicking this button should allow the user to select an image from their pc                                | Click the upload image button | Loads a popup allowing user to select images from their pc | Pass          |
+| Download prediction link | Clicking this link should allow the user to download the prediction data into a csv file                                | Click the download prediction results link | Prediction data is downloaded as a csv | Pass          |
+| Add new images to mildew detection when there are already images  | User should be able to upload a new image while there are already images loaded                                 | Upload a new image while there are already images loaded | New image is displayed and results are added to the summary and the old images are retained  | Pass          |
+| Remove image "X" button             | This button should remove an image from the detector page and results from the summary                                  | Click the "X" button                                       | Image and results are removed     | Pass          |
+
 ## Credits
 ### ML Model
 - I used a combination of the ML Walkthrough project and the Churnometer Project from [Code Institute](https://codeinstitute.net) as a guide on how the model should be structured and the steps that should be taken in order to get a working ML model.
