@@ -3,6 +3,10 @@
 ## Project Overview
 This project aims to develop a machine learning model and a supporting dashboard to differentiate between healthy cherry leaves and those infected with powdery mildew.
 
+
+### Live site
+Please click [here](https://jf-mildew-detector-09b8c9aef9a8.herokuapp.com) to view the live sit. Please allow time for the application to load and please open this in a new tab.
+
 ## Agile
 ### Kanban Board
 I utilized a [Kanban Board](https://github.com/users/jflets/projects/4) to layout what needed to be completed to finish this project. Doing this kept me on track and helped break up the whole project into manageable chunks with clear objectives.
@@ -24,28 +28,34 @@ Our Streamlit dashboard is designed to provide an interactive way to explore our
 The sidebar on the left side of the dashboard serves as your main navigation menu. Here, you can select different pages to explore various aspects of the project.
 
 #### Project Summary
+![Landing Page](/static/images/landing-page.webp)
 - **Objective:** Get an overview of the project.
 - **How to Use:** Click on "Project Summary" in the sidebar. This page provides an introduction to the project, including the dataset used, objectives, and business requirements addressed by the project.
 
 #### Visual Differentiation Study
+![Visual Differentiation Study](/static/images/vd-study.webp)
 - **Objective:** Explore the findings from the visual differentiation study between healthy and powdery mildew-infected cherry leaves.
 - **How to Use:** Select "Visual Differentiation Study" from the sidebar. This section showcases average and variability images, highlights differences between healthy and infected leaves, and presents image montages for visual comparison.
 
 #### Mildew Detection
+![Mildew Detector](/static/images/detector.webp)
 - **Objective:** Use the machine learning model to predict the health status of cherry leaves.
 - **How to Use:** Choose "Mildew Detection" in the sidebar. Upload a cherry leaf image using the file uploader widget. After uploading, click the "Predict" button to receive the model's prediction and confidence level regarding the leaf's health status.
 
 #### Project Hypothesis and Validation
+![Project hypothesis](/static/images/hypoth.webp)
 - **Objective:** Understand the project hypothesis and how it was validated.
 - **How to Use:** Navigate to "Project Hypothesis and Validation" from the sidebar. This page discusses the hypothesis behind the project and the methods used for validation, including model performance metrics.
 
 #### Model Performance
+![Model Performance](/static/images/model-performance.webp)
 - **Objective:** Review the performance of the machine learning model.
 - **How to Use:** Click on "Model Performance" in the sidebar. This section provides graphs illustrating the model's accuracy and loss over training and validation phases, alongside a summary of its performance on the test set.
 
 #### Additional Features
-- **Interactive Elements:** Many pages include interactive elements such as buttons, sliders, and checkboxes, which you can use to customize your experience.
+- **Interactive Elements:** Many pages include interactive elements such as buttons and checkboxes, which you can use to customize your experience.
 - **Downloading Results:** On pages that provide predictions or analyses, look for options to download the results for your records.
+![Download](/static/images/output-summary.webp)
 
 ## Dataset
 The dataset used in this project contains images of cherry leaves, categorized into healthy and powdery mildew-infected classes. [Dataset source](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves).
@@ -183,12 +193,15 @@ Implementing an ML model addresses the need for a scalable solution to inspect c
 
 ### Dashboard design
 - I used a combination of the ML Walkthrough project and the Churnometer Project from [Code Institute](https://codeinstitute.net) as a guide for the dashboard.
+- I used the [Streamlit](https://blog.streamlit.io/introducing-theming/) documentation on how to change the themes.
+- I also used [Coolors](https://coolors.co/) for generating the colors.
 
 ### Content
 - Dataset and project idea inspired by [Kaggle Cherry Leaves Dataset](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves).
 
 ### Media
 - Images used in the dashboard are sourced from the Kaggle dataset mentioned above.
+- I used [cloud convert](https://cloudconvert.com/png-to-webp) to change png's to webp so keep the file sizes down.
 
 ## Acknowledgements
 I would like to thank [Code Institute](https://codeinstitute.net) for their help and guidance.
