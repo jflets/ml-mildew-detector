@@ -28,34 +28,28 @@ Our Streamlit dashboard is designed to provide an interactive way to explore our
 The sidebar on the left side of the dashboard serves as your main navigation menu. Here, you can select different pages to explore various aspects of the project.
 
 #### Project Summary
-![Landing Page](/static/images/landing-page.webp)
 - **Objective:** Get an overview of the project.
 - **How to Use:** Click on "Project Summary" in the sidebar. This page provides an introduction to the project, including the dataset used, objectives, and business requirements addressed by the project.
 
 #### Visual Differentiation Study
-![Visual Differentiation Study](/static/images/vd-study.webp)
 - **Objective:** Explore the findings from the visual differentiation study between healthy and powdery mildew-infected cherry leaves.
 - **How to Use:** Select "Visual Differentiation Study" from the sidebar. This section showcases average and variability images, highlights differences between healthy and infected leaves, and presents image montages for visual comparison.
 
 #### Mildew Detection
-![Mildew Detector](/static/images/detector.webp)
 - **Objective:** Use the machine learning model to predict the health status of cherry leaves.
 - **How to Use:** Choose "Mildew Detection" in the sidebar. Upload a cherry leaf image using the file uploader widget. After uploading, click the "Predict" button to receive the model's prediction and confidence level regarding the leaf's health status.
 
 #### Project Hypothesis and Validation
-![Project hypothesis](/static/images/hypoth.webp)
 - **Objective:** Understand the project hypothesis and how it was validated.
 - **How to Use:** Navigate to "Project Hypothesis and Validation" from the sidebar. This page discusses the hypothesis behind the project and the methods used for validation, including model performance metrics.
 
 #### Model Performance
-![Model Performance](/static/images/model-performance.webp)
 - **Objective:** Review the performance of the machine learning model.
 - **How to Use:** Click on "Model Performance" in the sidebar. This section provides graphs illustrating the model's accuracy and loss over training and validation phases, alongside a summary of its performance on the test set.
 
 #### Additional Features
 - **Interactive Elements:** Many pages include interactive elements such as buttons and checkboxes, which you can use to customize your experience.
 - **Downloading Results:** On pages that provide predictions or analyses, look for options to download the results for your records.
-![Download](/static/images/output-summary.webp)
 
 ## Dataset
 The dataset used in this project contains images of cherry leaves, categorized into healthy and powdery mildew-infected classes. [Dataset source](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves).
@@ -80,6 +74,7 @@ Implementing an ML model addresses the need for a scalable solution to inspect c
 ## Design Document for Streamlit Dashboard
 
 1. **Project Summary Page**
+![Landing Page](/static/images/landing-page.webp)
     - **Objective**: Provide an overview of the project, dataset, and client's requirements.
     - **Components**:
         - Project introduction.
@@ -87,6 +82,7 @@ Implementing an ML model addresses the need for a scalable solution to inspect c
         - Business requirements overview.
 
 2. **Visual Differentiation Study Page**
+![Visual Differentiation Study](/static/images/vd-study.webp)
     - **Objective**: Address BR1 by showcasing the study's findings.
     - **Components**:
         - Analysis of average and variability images for each class.
@@ -94,19 +90,23 @@ Implementing an ML model addresses the need for a scalable solution to inspect c
         - Image montage display for both classes.
 
 3. **Mildew Detection Page**
+![Mildew Detector](/static/images/detector.webp)
     - **Objective**: Fulfill BR2 by allowing users to predict the health status of cherry leaves.
     - **Components**:
         - File uploader for image prediction.
         - Display of uploaded images with prediction statements and probabilities.
         - Table of image names and prediction results with a download option.
+    ![Download](/static/images/output-summary.webp)
 
 4. **Project Hypothesis and Validation Page**
+![Project hypothesis](/static/images/hypoth.webp)
     - **Objective**: Explain the project hypothesis and the methods used for validation.
     - **Components**:
         - Detailed explanation of hypothesis.
         - Validation methods and findings.
 
 5. **Model Performance Page**
+![Model Performance](/static/images/model-performance.webp)
     - **Objective**: Present the performance metrics of the developed model.
     - **Components**:
         - Accuracy and loss graphs.
