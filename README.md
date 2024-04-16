@@ -1,5 +1,67 @@
 # Mildew Detection in Cherry Leaves
 
+
+1. [**Project Overview**]
+    - [Live site](#live-site)
+
+2. [**Agile**](#agile)
+    - [Kanban Board](#kanban-board)
+    - [User Stories](#user-stories)
+    - [Story Points](#story-points)
+
+3. [**Implementation of CRISP-DM**](#implementation-of-crisp-dm)
+    - [Business Understanding](#1-business-understanding)
+    - [Data Understanding](#2-data-understanding)
+    - [Data Preparation](#3-data-preparation)
+    - [Modeling](#4-modeling)
+    - [Evaluation](#5-evaluation)
+    - [Deployment](#6-deployment)
+
+4. [**How to Use the Streamlit Dashboard for Mildew Detection in Cherry Leaves**](#how-to-use-the-streamlit-dashboard-for-mildew-detection-in-cherry-leaves)
+    - [Accessing the Dashboard](#accessing-the-dashboard)
+    - [Navigating the Dashboard](#navigating-the-dashboard)
+    - [Project Summary](#project-summary)
+    - [Visual Differentiation Study](#visual-differentiation-study)
+    - [Mildew Detection](#mildew-detection)
+    - [Project Hypothesis and Validation](#project-hypothesis-and-validation)
+    - [Model Performance](#model-performance)
+    - [Additional Features](#additional-features)
+
+5. [**Dataset**](#dataset)
+
+6. [**Business Requirements**](#business-requirements)
+    - [BR1: Visual Differentiation Study](#br1-visual-differentiation-study)
+    - [BR2: Mildew Detection](#br2-mildew-detection)
+
+7. [**Hypothesis and Validation**](#hypothesis-and-validation)
+
+8. [**ML Business Case**](#ml-business-case)
+
+9. [**Design Document for Streamlit Dashboard**]
+
+10. [**Bugs and Issues**](#bugs-and-or-issues)
+    - [Bugs](#bugs)
+    - [Issues during development](#issues-during-development)
+
+11. [**Deployment**](#deployment)
+    - [Deployment to Heroku](#deployment-to-heroku)
+
+12. [**Main Data Analysis and Machine Learning Libraries**](#main-data-analysis-and-machine-learning-libraries)
+    - [TensorFlow-CPU and Keras](#tensorflow-cpu-and-keras)
+    - [NumPy](#numpy)
+    - [Pandas](#pandas)
+    - [Matplotlib](#matplotlib)
+    - [Pillow](#pillow)
+    - [Streamlit](#streamlit)
+
+13. [**Testing**](#testing)
+
+14. [**Credits**](#credits)
+    - [ML Model](#ml-model)
+    - [Dashboard design](#dashboard-design)
+    - [Content](#content)
+    - [Media](#media)
+
 ## Project Overview
 This project aims to develop a machine learning model and a supporting dashboard to differentiate between healthy cherry leaves and those infected with powdery mildew.
 
@@ -16,6 +78,32 @@ From 5 Epics, 9 User stories were developed. Each story was given acceptance cri
 
 ### Story Points
 Each story was assigned story points based on your best estimation for the time/difficulty of completing each story, using the fibonacci sequence. Using the story points give me a good understanding of how long each task would take.
+
+
+## Implementation of CRISP-DM
+
+In this project, I've embraced the CRoss Industry Standard Process for Data Mining (CRISP-DM) framework as a structured approach to guide the development and execution of the machine learning solution. CRISP-DM consists of six major phases: Business Understanding, Data Understanding, Data Preparation, Modeling, Evaluation, and Deployment. Let's delve into how each phase was incorporated into this project:
+
+### 1. Business Understanding:
+I began by thoroughly understanding the project objectives and requirements. This phase involved identifying the problem statement, defining success criteria, and understanding the business context surrounding the detection of powdery mildew in cherry leaves, I gained clarity on the project's scope and the expected outcomes.
+
+### 2. Data Understanding:
+Understanding the data was important to building an effective machine learning model. I started by acquiring the cherry leaves dataset, exploring its structure, and assessing its quality, to gain insights into the characteristics of the dataset and potential challenges.
+
+### 3. Data Preparation:
+Data preparation involved several steps to ensure the dataset was suitable for model training. This phase included data cleaning to address missing values or inconsistencies, feature engineering to extract relevant information from the raw data, and data transformation to prepare the dataset for modeling. Additionally, I performed data augmentation techniques to enhance the diversity of the training data and improve the model's robustness.
+
+### 4. Modeling:
+In the modeling phase, I constructed and trained machine learning models using TensorFlow and Keras. This involved selecting appropriate algorithms, defining model architectures, and tuning hyperparameter to optimize performance.
+
+### 5. Evaluation:
+Evaluation was conducted to assess the performance of the trained models and validate their effectiveness. This involved splitting the dataset into training and validation sets, evaluating metrics such as accuracy and analyzing the model's behavior through learning curves. I iteratively refined the models based on evaluation results to improve their accuracy and generalization capabilities.
+
+### 6. Deployment:
+The final phase of CRISP-DM involved deploying the machine learning solution for practical use. I deployed the model as a Streamlit web application hosted on Heroku, providing stakeholders with an intuitive interface to interact with the model and make predictions on new cherry leaf images. Continuous monitoring and maintenance ensure the deployed solution remains effective and reliable over time.
+
+By following the CRISP-DM framework, I ensured a systematic and structured approach to the entire data mining process, from understanding the business problem to deploying the solution in a real-world environment.
+
 
 ## How to Use the Streamlit Dashboard for Mildew Detection in Cherry Leaves
 
