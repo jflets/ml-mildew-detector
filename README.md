@@ -37,7 +37,7 @@
 
 8. [**ML Business Case**](#ml-business-case)
 
-9. [**Design Document for Streamlit Dashboard**]
+9. [**Design Document for Streamlit Dashboard**](#design-document-for-streamlit-dashboard)
 
 10. [**Bugs and Issues**](#bugs-and-or-issues)
     - [Bugs](#bugs)
